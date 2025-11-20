@@ -76,6 +76,7 @@ const Hero = () => {
 
                         {/* Actual profile image container */}
                         <div className="absolute inset-0 bg-gray-800 rounded-full overflow-hidden flex items-center justify-center shadow-2xl">
+<<<<<<< HEAD
                             <Image
                                 src="/img.jpeg"        // Correct path for production
                                 alt="Profile Image"
@@ -84,6 +85,12 @@ const Hero = () => {
                                 className="object-cover rounded-full"
                                 priority                 // Improves Lighthouse score
                             />
+=======
+                            {/* Placeholder for profileimage */}
+                            <span className="">
+                                <img src="../public/img.jpeg" alt="" />
+                            </span>
+>>>>>>> c64b1bea5b2296a8868bc534aa35cb499f4dd874
                         </div>
                     </div>
                 </div>
