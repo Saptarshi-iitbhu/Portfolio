@@ -52,7 +52,7 @@ const Hero = () => {
                     <div className="relative w-64 h-64 md:w-80 md:h-80">
                         <div className="absolute inset-0 border-2 border-slate-500 rounded-full transform translate-x-4 translate-y-4"></div>
                         <div className="absolute inset-0 bg-gray-800 rounded-full overflow-hidden flex items-center justify-center shadow-2xl">
-                            {/* Placeholder for profile image */}
+                            {/* Placeholder for profileimage */}
                             <span className="">
                                 <img src="../public/img.jpeg" alt="" />
                             </span>
