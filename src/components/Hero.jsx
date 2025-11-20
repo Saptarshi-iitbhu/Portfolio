@@ -54,7 +54,7 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-gray-800 rounded-full overflow-hidden flex items-center justify-center shadow-2xl">
                             {/* Placeholder for profile image */}
                             <span className="">
-                                <img src="./src/assets/img.jpeg" alt="" />
+                                <img src="../public/img.jpeg" alt="" />
                             </span>
                         </div>
                     </div>
