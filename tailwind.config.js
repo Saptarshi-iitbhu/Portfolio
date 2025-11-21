@@ -8,14 +8,15 @@ export default {
     extend: {
       colors: {
         gray: {
-          900: '#1a1a1a', // Dark Gray
-          800: '#2d2d2d', // Surface
-          700: '#3d3d3d',
+          900: '#0f172a', // Darker, bluer gray (Slate 900)
+          800: '#1e293b', // Slate 800
+          700: '#334155', // Slate 700
         },
         slate: {
-          300: '#8f969c',
-          400: '#71797E', // Steel
-          500: '#5d656b',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
         }
       }
     },

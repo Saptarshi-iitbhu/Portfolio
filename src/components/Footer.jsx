@@ -1,10 +1,17 @@
 import React from 'react';
 import { resumeData } from '../data/resumeData';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-900 border-t border-gray-800 py-12">
+        <motion.footer
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6 }}
+            className="bg-black border-t border-gray-800 py-12"
+        >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="mb-6 md:mb-0">
@@ -34,7 +41,7 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-        </footer>
+        </motion.footer>
     );
 };
 

@@ -1,18 +1,30 @@
 import React from 'react';
 import { resumeData } from '../data/resumeData';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
-        <section id="contact" className="py-20 bg-gray-900">
+        <section id="contact" className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">Get In Touch</h2>
                     <div className="w-20 h-1 bg-slate-500 mx-auto rounded"></div>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         <h3 className="text-2xl font-bold text-gray-100 mb-6">Let's Connect</h3>
                         <p className="text-gray-400 mb-8 leading-relaxed">
                             I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
@@ -52,9 +64,15 @@ const Contact = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <form className="space-y-4">
+                    <motion.form
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                        className="space-y-4"
+                    >
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-sm text-gray-400">Name</label>
@@ -103,7 +121,7 @@ const Contact = () => {
                             <Send size={18} />
                             Send Message
                         </button>
-                    </form>
+                    </motion.form>
                 </div>
             </div>
         </section>

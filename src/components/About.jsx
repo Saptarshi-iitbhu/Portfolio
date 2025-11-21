@@ -1,18 +1,30 @@
 import React from 'react';
 import { resumeData } from '../data/resumeData';
 import { GraduationCap, Calendar, Award } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const About = () => {
     return (
-        <section id="about" className="py-20 bg-gray-800">
+        <section id="about" className="py-20 bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.2 }}
+                    transition={{ duration: 0.6 }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4">About Me</h2>
                     <div className="w-20 h-1 bg-slate-500 mx-auto rounded"></div>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         <h3 className="text-2xl font-semibold text-slate-400 mb-6 flex items-center gap-2">
                             <GraduationCap /> Education
                         </h3>
@@ -29,9 +41,14 @@ const About = () => {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: false, amount: 0.2 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
                         <h3 className="text-2xl font-semibold text-slate-400 mb-6">Personal Profile</h3>
                         <p className="text-gray-300 leading-relaxed mb-6">
                             I am a final year student at IIT (BHU), Varanasi, pursuing a degree in IDD Ceramic Engineering.
@@ -52,7 +69,7 @@ const About = () => {
                                 <span className="text-sm text-gray-400">Global Rank on LeetCode</span>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>
